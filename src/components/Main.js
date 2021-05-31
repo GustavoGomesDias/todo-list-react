@@ -16,6 +16,25 @@ export default class Main extends Component {
     index: -1,
   };
 
+  // Chamada quando um component é montado na tela
+  componentDidMount() {
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+
+    if (!tasks) return;
+    this.setState({ tasks });
+  }
+
+  // Chamada quando um component é atualizado
+  // prevProps => propriedades anteriores
+  // prevState => Estado anterior
+  componentDidUpdate(prevProps, prevState) {
+    const { tasks } = this.state;
+
+    if (tasks === prevState.tasks) return;
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     const { tasks, index } = this.state;
