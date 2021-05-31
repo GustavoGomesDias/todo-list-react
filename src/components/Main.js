@@ -3,22 +3,30 @@ import React, { Component } from 'react';
 // Form
 import { FaPlus } from 'react-icons/fa';
 
+// Tasks
+import { FaEdit, FaWindowClose } from 'react-icons/fa';
+
 import './Main.css';
 
 export default class Main extends Component {
   // Controla o estado do componente
   state = {
-    novaTarefa: '',
+    newTask: '',
+    tasks: [
+      'Fazer café',
+      'Beber água',
+      'Comer fruta',
+    ],
   };
 
   handleChange = (e) => {
     this.setState({
-      novaTarefa: e.target.value,
+      newTask: e.target.value,
     });
   }
 
   render() {
-    const { novaTarefa } = this.state;
+    const { newTask, tasks } = this.state;
 
     return (
       <div className="main">
@@ -31,12 +39,23 @@ export default class Main extends Component {
           <input
             onChange={this.handleChange}
             type="text"
-            value={novaTarefa}
+            value={newTask}
           />
           <button type="submit">
             <FaPlus />
           </button>
         </form>
+        <ul className="tasks">
+          {tasks.map((task) => (
+            <li key={task}>
+              {task}
+              <span>
+                <FaEdit className="edit" />
+                <FaWindowClose className="delete" />
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     );
   }
