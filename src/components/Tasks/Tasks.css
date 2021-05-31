@@ -1,5 +1,6 @@
 .tasks {
   margin-top: 30px;
+  color: #6FA4FC;
 }
 
 .tasks li {
@@ -10,13 +11,13 @@
 }
 
 .tasks li:hover {
-  color: #51c5de;
+  color: #7F3F27;
+  transition: all 600ms;
 }
 
 .tasks li .edit {
   margin-right: 15px;
   color: #51c5de;
-  transition: all 600ms;
 }
 
 .tasks li .delete {
@@ -24,9 +25,9 @@
   color: #f04c64;
 }
 
-.tasks li:hover .edit,
-.tasks li:hover .delete {
-  color: #000;
+.tasks li .edit:hover,
+.tasks li .delete:hover {
+  color: #7F3F27;
   transition: all 600ms;
 }
 .tasks li .edit,

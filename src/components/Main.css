@@ -1,5 +1,5 @@
 .main {
-  background: #fff;
+  background: #1A1B27;
   padding: 30px;
   margin: 50px auto;
   max-width: 500px;
@@ -10,4 +10,5 @@
 .main h1 {
   font-size: 20px;
   text-align: center;
+  color: #6FA4FC;
 }
