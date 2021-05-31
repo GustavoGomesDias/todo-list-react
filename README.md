@@ -2,19 +2,22 @@
 
 ToDo list da galera, versão React
 
-![ToDoList Preview](https://github.com/GustavoGomesDias/todo-list-react/blob/main/public/image/todolist-react.gif)
+
 
 
 ## 📕 Sumário
-1. [Preview](https://github.com/GustavoGomesDias/todo-list-react#1--preview)
-2. [Tecnologias usadas](https://github.com/GustavoGomesDias/todo-list-react#2--tecnologias-usadas)
+1. [O que eu aprendi...](https://github.com/GustavoGomesDias/todo-list-react#2-o-que-eu-aprendi)
+2. [Tecnologias usadas](https://github.com/GustavoGomesDias/todo-list-react#3--tecnologias-usadas)
 
-## 1. O que eu aprendi...
+## 1. 😲 Preview
+![ToDoList Preview](https://github.com/GustavoGomesDias/todo-list-react/blob/main/public/image/todolist-react.gif)
+
+## 2. O que eu aprendi...
 * Esse não foi meu promeiro projeto em React, mas foi o primeiro que pegou pelo básico, então eu aprendi o básico aqui.
   * Tipos de components;
   * O conceito mais geral de como se estutura um projeto React.
 
-## 2. 💻 Tecnologias usadas
+## 3. 💻 Tecnologias usadas
 * React;
 * ESLint;
 
