@@ -6,8 +6,9 @@ ToDo list da galera, versão React
 
 
 ## 📕 Sumário
-1. [O que eu aprendi...](https://github.com/GustavoGomesDias/todo-list-react#2-o-que-eu-aprendi)
-2. [Tecnologias usadas](https://github.com/GustavoGomesDias/todo-list-react#3--tecnologias-usadas)
+1. [Preview](https://github.com/GustavoGomesDias/todo-list-react#1--preview)
+2. [O que eu aprendi...](https://github.com/GustavoGomesDias/todo-list-react#2-o-que-eu-aprendi)
+3. [Tecnologias usadas](https://github.com/GustavoGomesDias/todo-list-react#3--tecnologias-usadas)
 
 ## 1. 😲 Preview
 ![ToDoList Preview](https://github.com/GustavoGomesDias/todo-list-react/blob/main/public/image/todolist-react.gif)
