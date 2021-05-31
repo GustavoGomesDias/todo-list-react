@@ -12,12 +12,23 @@ export default class Main extends Component {
   // Controla o estado do componente
   state = {
     newTask: '',
-    tasks: [
-      'Fazer café',
-      'Beber água',
-      'Comer fruta',
-    ],
+    tasks: [],
   };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { tasks } = this.state;
+    let { newTask } = this.state;
+    newTask = newTask.trim();
+
+    if (tasks.indexOf(newTask) !== -1) return;
+
+    const newTasks = [...tasks];
+
+    this.setState({
+      tasks: [...newTasks, newTask],
+    });
+  }
 
   handleChange = (e) => {
     this.setState({
@@ -31,7 +42,7 @@ export default class Main extends Component {
     return (
       <div className="main">
         <h1>Lista de tarefas</h1>
-        <form action="#" className="form">
+        <form onSubmit={this.handleSubmit} action="#" className="form">
           {/*
             handle == lidar com | handleChange == lidar com mudança.
             Usar hnadle sempre que tiver um evento com 'on'.
