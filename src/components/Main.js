@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
-
-// Form
-import { FaPlus } from 'react-icons/fa';
-
-// Tasks
-import { FaEdit, FaWindowClose } from 'react-icons/fa';
+import Form from './Form';
+import Tasks from './Tasks';
 
 import './Main.css';
 
@@ -90,37 +86,16 @@ export default class Main extends Component {
     return (
       <div className="main">
         <h1>Lista de tarefas</h1>
-        <form onSubmit={this.handleSubmit} action="#" className="form">
-          {/*
-            handle == lidar com | handleChange == lidar com mudança.
-            Usar hnadle sempre que tiver um evento com 'on'.
-          */}
-          <input
-            onChange={this.handleChange}
-            type="text"
-            value={newTask}
-          />
-          <button type="submit">
-            <FaPlus />
-          </button>
-        </form>
-        <ul className="tasks">
-          {tasks.map((task, index) => (
-            <li key={task}>
-              {task}
-              <span>
-                <FaEdit
-                  className="edit"
-                  onClick={(e) => this.handleEdit(e, index)}
-                />
-                <FaWindowClose
-                  onClick={(e) => this.handleDelete(e, index)}
-                  className="delete"
-                />
-              </span>
-            </li>
-          ))}
-        </ul>
+        <Form
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+          newTask={newTask}
+        />
+        <Tasks
+          tasks={tasks}
+          handleEdit={this.handleEdit}
+          handleDelete={this.handleDelete}
+        />
       </div>
     );
   }
